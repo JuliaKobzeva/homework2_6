@@ -10,22 +10,21 @@ public class Main {
         Product виноград = new Product("виноград", 150.0, 1.0);
         Product киви = new Product("киви", 90.0, 1.0);
 
-        Set<Product> listOfProducts = new HashSet<>();
+
+        Set<Product> listOfProducts2 = new HashSet<>();
+        ListOfProducts listOfProducts = new ListOfProducts(listOfProducts2);
         listOfProducts.add(банан);
         listOfProducts.add(апельсин);
         listOfProducts.add(персик);
         listOfProducts.add(виноград);
         listOfProducts.add(киви);
-        listOfProducts.add(киви);
-
-        listOfProducts.remove(персик);
-
         System.out.println(listOfProducts);
 
-        isBought(listOfProducts);
+        listOfProducts.remove(персик);
+        listOfProducts.isBought();
+
+        listOfProducts.add(киви);
     }
 
-    public static void isBought(Set<Product> listOfProducts){
-        System.out.println(listOfProducts + " - товар уже куплен");
-    }
+
 }
