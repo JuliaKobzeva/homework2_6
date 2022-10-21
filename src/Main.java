@@ -5,11 +5,10 @@ public class Main {
 
         Random random = new Random();
 
-        Integer number = random.nextInt(1000);
-
         List<Integer> list = new ArrayList<>();
 
         for (int i = 0; i < 20; i++) {
+            Integer number = random.nextInt(1000);
             list.add(number);
         }
 
