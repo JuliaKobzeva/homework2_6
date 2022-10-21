@@ -11,7 +11,7 @@ public class Recipe {
         this.name = name;
 
         for (Product product: products) {
-            this.productsCost = product.getCost() * products.size();
+            this.productsCost += product.getCost();
         }
     }
 
