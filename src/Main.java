@@ -10,14 +10,11 @@ public class Main {
         for (int i = 0; i < 20; i++) {
             Integer number = random.nextInt(1000);
             list.add(number);
-        }
-
-        System.out.println(list);
-
-        for (int i = 0; i < list.size(); i++) {
-            Integer element = list.get(i);
-            if(element  % 2 != 0){
-                list.remove(element);
+            for (int j = 0; j < list.size(); j++) {
+                Integer element = list.get(j);
+                if(element  % 2 != 0){
+                    list.remove(element);
+                }
             }
         }
 
