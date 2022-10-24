@@ -5,19 +5,14 @@ public class Main {
 
         Random random = new Random();
 
-        List<Integer> list = new ArrayList<>();
+        List<String> list = new ArrayList<>(15);
 
-        for (int i = 0; i < 20; i++) {
-            Integer number = random.nextInt(1000);
-            list.add(number);
-            for (int j = 0; j < list.size(); j++) {
-                Integer element = list.get(j);
-                if(element  % 2 != 0){
-                    list.remove(element);
-                }
-            }
+        for (int i = 0; i < 15; i++) {
+            int a = random.nextInt(9);
+            int b = random.nextInt(9);
+            String task = a + "*" + b;
+            list.add(task);
+            System.out.println(task);
         }
-
-        System.out.println(list);
     }
 }
