@@ -5,14 +5,15 @@ public class Main {
 
         Random random = new Random();
 
-        List<String> list = new ArrayList<>(15);
+        Set<String> list = new HashSet<>(15);
 
         for (int i = 0; i < 15; i++) {
-            int a = random.nextInt(9);
-            int b = random.nextInt(9);
+            int a = random.nextInt(4)+2;
+            int b = random.nextInt(5)+5;
             String task = a + "*" + b;
             list.add(task);
             System.out.println(task);
         }
+
     }
 }
