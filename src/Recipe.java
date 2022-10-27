@@ -11,11 +11,17 @@ public class Recipe {
 
         //Не получается почитать стоимость продуктов в рецепте с учетом количества
 
-        List<Product>list = List.of(products.keySet().toArray(new Product[0]));
+//        List<Product>list = List.of(products.keySet().toArray(new Product[0]));
+//
+//        for (Product product: list) {
+//                this.productsCost += product.getCost();
+//            }
 
-        for (Product product: list) {
-                this.productsCost += product.getCost();
-            }
+        for (Map.Entry entry: products.entrySet()) {
+            Product product = (Product) entry.getKey();
+            int cost = (int) entry.getValue();
+            this.productsCost += product.getCost() * cost;
+        }
     }
 
     public HashMap<Product, Integer> getProducts() {

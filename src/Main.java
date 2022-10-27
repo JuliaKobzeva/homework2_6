@@ -29,7 +29,7 @@ public class Main {
 //        listOfProducts.add(киви);
 
         HashMap<Product, Integer> blinyProducts = new HashMap<>();
-        blinyProducts.put(яйца,1);
+        blinyProducts.put(яйца,2);
         blinyProducts.put(мука,1);
         blinyProducts.put(молоко,1);
 
