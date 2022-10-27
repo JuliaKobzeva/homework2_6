@@ -1,21 +1,24 @@
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Recipe {
-    private List<Product> products;
+    private HashMap<Product, Integer> products;
     private double productsCost;
     private String name;
 
-    public Recipe(List<Product> products, String name) {
+    public Recipe(HashMap<Product, Integer> products, String name) {
         this.products = products;
         this.name = name;
 
-        for (Product product: products) {
-            this.productsCost += product.getCost();
-        }
+        //Не получается почитать стоимость продуктов в рецепте с учетом количества
+
+        List<Product>list = List.of(products.keySet().toArray(new Product[0]));
+
+        for (Product product: list) {
+                this.productsCost += product.getCost();
+            }
     }
 
-    public List<Product> getProducts() {
+    public HashMap<Product, Integer> getProducts() {
         return products;
     }
 

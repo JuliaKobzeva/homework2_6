@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,11 +28,20 @@ public class Main {
 
 //        listOfProducts.add(киви);
 
-        List<Product> blinyProducts = List.of(яйца, мука, молоко);
+        HashMap<Product, Integer> blinyProducts = new HashMap<>();
+        blinyProducts.put(яйца,1);
+        blinyProducts.put(мука,1);
+        blinyProducts.put(молоко,1);
+
         Recipe bliny = new Recipe(blinyProducts,"блины");
         System.out.println(bliny);
 
-        List<Product> keksProducts = List.of(яйца, мука, масло, йогурт);
+        HashMap<Product, Integer> keksProducts = new HashMap<>();
+        keksProducts.put(яйца,1);
+        keksProducts.put(мука,1);
+        keksProducts.put(масло,1);
+        keksProducts.put(йогурт,1);
+
         Recipe keks = new Recipe(keksProducts,"кекс");
         System.out.println(keks);
 
