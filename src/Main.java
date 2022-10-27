@@ -16,5 +16,6 @@ public class Main {
 
         farm2.put("лошади",7);
         System.out.println(farm2);
+
     }
 }
