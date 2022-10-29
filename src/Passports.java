@@ -20,11 +20,7 @@ public class Passports {
     }
 
     public Passport findPassport(String string){
-        if (passports.containsKey(string)) {
             return passports.get(string);
-        }else {
-            return null;
-        }
     }
 
     @Override
