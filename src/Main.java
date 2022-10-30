@@ -49,7 +49,6 @@ public class Main {
             System.out.println(element.getKey() + " " + element.getValue());
         }
 
-
 //        Integer numberSum1 = number1 + number2 + number3;
 //        Integer numberSum2 = number4 + number5 + number6;
 //        Integer numberSum3 = number7 + number8 + number9;
