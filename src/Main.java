@@ -42,22 +42,38 @@ public class Main {
             System.out.println(element.getKey() + " " + element.getValue());
         }
 
-        Integer numberSum1 = number1 + number2 + number3;
-        Integer numberSum2 = number4 + number5 + number6;
-        Integer numberSum3 = number7 + number8 + number9;
-        Integer numberSum4 = number10 + number11 + number12;
-        Integer numberSum5 = number13 + number14 + number15;
-
         Map<String, Integer> map2 = new HashMap<>();
-
-        map2.put("Список №1",numberSum1);
-        map2.put("Список №2",numberSum2);
-        map2.put("Список №3",numberSum3);
-        map2.put("Список №4",numberSum4);
-        map2.put("Список №5",numberSum5);
+        map2 = getTransformMap(map);
 
         for(Map.Entry<String, Integer> element : map2.entrySet()){
             System.out.println(element.getKey() + " " + element.getValue());
         }
+
+
+//        Integer numberSum1 = number1 + number2 + number3;
+//        Integer numberSum2 = number4 + number5 + number6;
+//        Integer numberSum3 = number7 + number8 + number9;
+//        Integer numberSum4 = number10 + number11 + number12;
+//        Integer numberSum5 = number13 + number14 + number15;
+//
+//        Map<String, Integer> map2 = new HashMap<>();
+//
+//        map2.put("Список №1",numberSum1);
+//        map2.put("Список №2",numberSum2);
+//        map2.put("Список №3",numberSum3);
+//        map2.put("Список №4",numberSum4);
+//        map2.put("Список №5",numberSum5);
+//
+//        for(Map.Entry<String, Integer> element : map2.entrySet()){
+//            System.out.println(element.getKey() + " " + element.getValue());
+//        }
+    }
+
+    public static Map<String, Integer> getTransformMap(Map<String, List<Integer>> map) {
+        var temp = new HashMap<String, Integer>();
+        for (Map.Entry<String, List<Integer>> entry : map.entrySet()) {
+            temp.put(entry.getKey(), entry.getValue().get(0) + entry.getValue().get(1) + entry.getValue().get(2));
+        }
+        return temp;
     }
 }
