@@ -25,7 +25,6 @@ public class Main {
         Integer number14 = random.nextInt(1000);
         Integer number15 = random.nextInt(1000);
 
-
         List<Integer>list = List.of(number1,number2,number3);
         List<Integer>list2 = List.of(number4,number5,number6);
         List<Integer>list3 = List.of(number7,number8,number9);
