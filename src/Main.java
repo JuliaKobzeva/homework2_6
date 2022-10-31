@@ -71,7 +71,12 @@ public class Main {
     public static Map<String, Integer> getTransformMap(Map<String, List<Integer>> map) {
         var temp = new HashMap<String, Integer>();
         for (Map.Entry<String, List<Integer>> entry : map.entrySet()) {
-            temp.put(entry.getKey(), entry.getValue().get(0) + entry.getValue().get(1) + entry.getValue().get(2));
+            List<Integer> tempList = entry.getValue();
+            Integer sum = 0;
+            for(Integer integer : tempList){
+                sum += integer;
+            }
+            temp.put(entry.getKey(), sum);
         }
         return temp;
     }
